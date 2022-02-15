@@ -9,6 +9,8 @@ For example next mapping: `-m "fields/summary,fields/description->string:text" "
 means that jira ticket fields `fields/summary` and `fields/description` will be concatenated to single string and written to field with name `text`.
 And jira ticket field `fields/components[]/name` (`fields/components` is array) will be written to field with name `label` but only in case if there is only one element in `fields/components` array. In other case ticket will be not saved to result file.
 
+Another example: `-m "key->single_string:id" "fields/labels->array:labels" "fields/reporter/emailAddress"->"single_string:reporter" "fields/status/name"->"single_string:status"`
+
 [dpath](https://pypi.org/project/dpath/) is used for retrieving of jira ticket fields.
 
 So the utility can be used for preparing data for Machine Learning or some other tasks.

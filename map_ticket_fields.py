@@ -30,7 +30,7 @@ def __adjust_result(results, mapping_result_type):
         return results[0]
 
     if ARRAY_RESULT_TYPE == mapping_result_type:
-        return mapping_result_type
+        return results
 
     raise TypeError("Not known type: " + mapping_result_type)
 
